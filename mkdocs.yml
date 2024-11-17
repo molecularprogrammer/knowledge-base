@@ -1,0 +1,46 @@
+site_name: Molecular Programmer Knowledge Base
+site_description: Molecular programming news, fundamentals, tutorials, and more
+site_url: https://docs.molecularprogrammer.org
+repo_url: https://github.com/molecularprogrammer/knowledge-base
+repo_name: molecularprogrammer/knowledge-base
+docs_dir: docs
+
+theme:
+    logo: images/logo.ico
+    favicon: images/logo.ico
+    name: material
+    palette:
+        -   scheme:     slate
+    features:
+        -   navigation.tracking
+        -   navigation.instant
+
+plugins:
+    - search
+    - awesome-pages
+    - minify
+    - tags:
+        tags_file: tags.md
+
+markdown_extensions:
+    - admonition
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - admonition
+    - pymdownx.details
+    - attr_list
+    - tables
+    - plantuml_markdown:
+          server: "http://www.plantuml.com/plantuml"
+
+extra_css:
+    - assets/styles.css
+    - assets/highlight.css
+    - assets/dmvendor.css
+
+extra_javascript:
+    - assets/highlight.min.js
+    - assets/highlight_init.js
