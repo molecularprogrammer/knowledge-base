@@ -35,8 +35,8 @@ Project-based learning.
 
 ## [Applications](applications/)
 
-Lists of applications that have been--or could eventually be--made possible by
-molecular programming.
+Lists of specific applications that could be made possible by molecular programming.
+This is intended to be inspirational, not a complete listing.
 
 ## [Organizations](organizations/)
 
@@ -82,48 +82,3 @@ whether for therapeutic use or for creating artificial life, raises profound que
 the boundaries between biology and technology, the potential for unintended consequences, and
 the regulation of these powerful technologies. Society will need to grapple with these issues
 as molecular programming becomes a mainstream technology.
-
-## Impact on Industries
-
-### Healthcare and Biotechnology
-
-- **Personalized Medicine**: Molecular programming allows for the creation of custom-built
-molecules or nanoscale machines that can diagnose diseases, deliver drugs, or even perform genetic
-editing with extreme precision. Technologies like **CRISPR** gene editing are already transforming
-healthcare, and molecular programming could further enhance these tools by improving their efficiency,
-accuracy, and scalability.
-- **Drug Delivery Systems**: Molecular machines and self-assembling materials could enable the
-development of programmable drug delivery systems that target specific cells or tissues, greatly
-enhancing the effectiveness of treatments while minimizing side effects. For instance, nanoparticles
-could be programmed to recognize and bind to cancerous cells, delivering drugs directly to the tumor site.
-- **Diagnostics and Sensors**: Molecular programming could lead to the development of highly sensitive
-diagnostic tools, enabling earlier detection of diseases through programmable biosensors that can detect
-minute levels of biomarkers in biological samples. These sensors could be embedded in wearables or even
-inside the body for continuous monitoring.
-
-### Manufacturing and Materials Science
-
-- **Self-assembling and Adaptive Materials**: In manufacturing, programmable matter could enable the
-creation of materials that self-assemble and reconfigure in response to changing conditions. This could
-be used for everything from smart textiles that adapt to environmental changes (e.g., regulating temperature
-or moisture) to structural materials that automatically heal when damaged.
-- **Distributed Manufacturing**: The ability to program molecular systems for material synthesis could
-decentralize production, leading to more localized, on-demand manufacturing. For example, molecular
-machines could be deployed in remote locations to assemble products or even construct complex structures
-in space or on distant planets, significantly reducing transportation costs and dependencies on centralized
-factories.
-- **Advanced Robotics**: Molecular programming can lead to the development of highly efficient, ultra-small
-robots capable of performing delicate tasks, such as assembling microelectronics, repairing damaged
-infrastructure, or even performing surgery with unprecedented precision.
-
-### Environmental Sustainability
-
-- **Pollution Control and Remediation**: Molecular systems could be programmed to clean up environmental
-pollutants at the molecular level. For instance, self-organizing systems could be designed to break down
-harmful chemicals or heavy metals, providing new solutions for waste management and environmental cleanup.
-- **Energy Efficiency**: By controlling matter at the molecular level, molecular programming could enable
-the design of more energy-efficient devices, sensors, and power systems. For instance, programmable solar
-cells that adapt to lighting conditions could greatly enhance the efficiency of renewable energy systems.
-- **Carbon Capture and Utilization**: Molecular machines could be engineered to capture carbon dioxide
-from the atmosphere and convert it into useful materials or energy, potentially helping to mitigate the
-effects of climate change.
