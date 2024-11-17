@@ -1,4 +1,4 @@
-# Healthcare Applications
+# Healthcare
 
 Molecular programming is poised to revolutionize healthcare by enabling precise control over biological systems, leading to groundbreaking treatments, diagnostics, and patient care innovations. Key applications include:
 

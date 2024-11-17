@@ -1,4 +1,4 @@
-# Computing and Data Storage
+# Computing
 
 Molecular programming is driving innovations in computing and data storage by leveraging the unique properties of molecules, such as their small size, programmability, and ability to perform parallel operations. Key applications include:
 

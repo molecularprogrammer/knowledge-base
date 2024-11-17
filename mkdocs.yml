@@ -10,10 +10,11 @@ theme:
     favicon: images/logo.ico
     name: material
     palette:
-        -   scheme:     slate
+        -   scheme: slate
     features:
-        -   navigation.tracking
-        -   navigation.instant
+        - navigation.tracking
+        - navigation.instant
+        - navigation.footer
 
 plugins:
     - search

@@ -1,13 +1,14 @@
 nav:
     - index.md
     - news.md
+    - what_is_molecular_programming
     - fundamentals
     - safety_ethics_regulation
     - tools
     - tutorials
-    - applications
     - organizations
-    - sources
+    - sources.md
     - contribute.md
     - chatbot.md
     - tags.md
+    - ...

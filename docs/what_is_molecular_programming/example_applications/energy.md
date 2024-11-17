@@ -1,4 +1,4 @@
-# Energy Generation, Harvesting, and Storage Applications
+# Energy
 
 Molecular programming is transforming the energy sector by enabling efficient, sustainable, and adaptive solutions for generating, capturing, and storing energy. These innovations address key challenges in renewable energy, grid stability, and resource efficiency. Key applications include:
 

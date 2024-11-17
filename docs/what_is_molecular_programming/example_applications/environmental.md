@@ -1,4 +1,4 @@
-# Environmental Monitoring and Control Applications
+# Environmental
 
 Molecular programming is enabling innovative solutions for monitoring, protecting, and restoring the environment. By leveraging programmable molecules and nanoscale systems, it is possible to detect pollutants, mitigate environmental damage, and enhance sustainability efforts. Key applications include:
 

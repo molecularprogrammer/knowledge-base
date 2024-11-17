@@ -1,0 +1,12 @@
+# Organize from a bottom up perspective
+
+nav:
+    - theoretical_foundations
+    - quantum_scale
+    - atomic_scale
+    - molecular_scale
+    - nanoscale
+    - microscale
+    - macroscale
+    - system_integration_and_control
+    - ...

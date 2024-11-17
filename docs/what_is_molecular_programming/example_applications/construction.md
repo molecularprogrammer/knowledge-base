@@ -1,4 +1,4 @@
-# Construction Applications
+# Construction
 
 Molecular programming is poised to revolutionize the construction industry by enabling the creation of advanced materials, sustainable building solutions, and autonomous construction techniques. By controlling matter at the molecular level, these innovations offer enhanced strength, durability, adaptability, and efficiency in construction practices. Key applications include:
 
