@@ -20,17 +20,15 @@ now or in the future.
 
 The latest advancements in the field.
 
-## [Fundamentals](fundamentals/)
+## [Research Topics](research_topics/)
 
-Knowledge from scientific, engineering, and mathetical research.
+The bulk of the content of this knowledge base.
+It focuses on scientific, engineering, and mathetical research.
 
-This will also reference:
+This will also:
 - Reference historical and active projects related to each topic, including tools
 and applications
 - Point out open questions in the field, that may guide future research directions
-
-
-in the field, and make suggestions future research directions.
 
 ## [Safety, Ethics, and Regulations](safety_ethics_regulation/)
 
