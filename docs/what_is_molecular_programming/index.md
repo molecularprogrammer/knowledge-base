@@ -4,7 +4,6 @@ Through its ability to control matter at the atomic level, molecular programming
 the creation of entirely new technologies. It will impact many industries, and radically
 transform society.
 
-## Transforming Society
 - **Democratization of Technology**: As molecular programming tools become more accessible,
 they could empower individuals and small organizations to create and manipulate materials
 on their own, bypassing the need for large-scale industrial facilities. This could lead
