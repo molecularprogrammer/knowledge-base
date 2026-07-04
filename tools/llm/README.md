@@ -1,3 +1,6 @@
+TODO: Add searxng to this.
+
+
 # Local LLM Cluster Infrastructure (GMKtec K12 Rig)
 
 This directory manages configurations, orchestration, and IDE integrations for our self-hosted, 
@@ -130,6 +133,7 @@ services:
       # Inline-Modified Security Key:
       - WEBUI_SECRET_KEY=b9c4f1e3a7d8c2e9b5f6a1d4c8e3f0b2a5d7c1e6b9f4a8d
       - AIOHTTP_CLIENT_TIMEOUT=60
+      - ENABLE_TOOLS=false
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
