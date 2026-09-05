@@ -1,5 +1,5 @@
 site_name: Molecular Programmer Knowledge Base
-site_description: Molecular programming news, fundamentals, tutorials, and more
+site_description: Molecular programming news, research topics, tutorials, and more
 site_url: https://docs.molecularprogrammer.org
 repo_url: https://github.com/molecularprogrammer/knowledge-base
 repo_name: molecularprogrammer/knowledge-base
@@ -10,10 +10,11 @@ theme:
     favicon: images/logo.ico
     name: material
     palette:
-        -   scheme:     slate
+        -   scheme: slate
     features:
-        -   navigation.tracking
-        -   navigation.instant
+        - navigation.tracking
+        - navigation.instant
+        - navigation.footer
 
 plugins:
     - search
