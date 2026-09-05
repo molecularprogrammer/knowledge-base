@@ -24,14 +24,16 @@ hardware development. This approach has a few advantages:
 - The content review process can place less emphasis on the credentials of the contributor and
 reviewers, and rely more heavily on real-world testing and verification
 
-Acheving this vision requires the community to strive for the following:
+Achieving this vision requires the community to strive for the following:
 
+
+- Standardize and rapidly release new tools for real-world testing, which will allow for faster and
+lower-cost reproduction of results
+- Place emphasis on being able to carry out real-world verification of content, ideally in the form
+of many external tutorial projects referenced from this knowledge base through any number of side
+projects
 - Make this field as accessible as possible to individuals and groups that may have limited resources,
 while also remaining commercially friendly
-- Place emphasis on being able to carry out real-world testing of content, ideally in the form of
-many external tutorial projects referenced from this knowledge base
-- Standardize and rapidly release new tools for real-world testing; this can be accomplished
-through any number of side projects
 - Focus research and enginering efforts most heavily on technological pathways that will require
 the least financial resources to use, so widespread adoption is easier
 
