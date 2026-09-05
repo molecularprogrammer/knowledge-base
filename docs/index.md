@@ -6,7 +6,7 @@ The goal of this project is to make it easier to enter the field of molecular pr
 to equip readers with resources to:
 
 - Stay current with the latest developments
-- Conduct research and use existing tools
+- Conduct research using existing and emerging tools
 - Design and fabricate devices
 - Collaborate with the molecular programming community
 
