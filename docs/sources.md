@@ -1,4 +1,6 @@
-# Sources for Molecular Programming Research
+# Sources
+
+Lists of sources to monitor for the latest research, tools, products, etc...
 
 ## Academic Journals
 - [Nature Nanotechnology](https://www.nature.com/nnano/) - High-impact research in nanoscience and nanotechnology
