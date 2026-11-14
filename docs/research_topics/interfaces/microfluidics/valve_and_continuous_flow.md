@@ -1,0 +1,3 @@
+Focus: Using multilayer soft lithography, pneumatic micro-valves, and programmable pumps for automated fluid handling.
+
+Initial Content: Ideal for complex, multi-step reaction networks and DNA circuit assembly. Pneumatic valves enable precise routing, mixing, metering, and incubation of small-volume reagents without chaotic turbulence, mimicking automated macroscopic lab benches at the micro-scale.

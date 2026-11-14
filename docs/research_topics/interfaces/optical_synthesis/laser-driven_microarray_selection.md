@@ -1,0 +1,1 @@
+Laser-driven microarray selection is an in vitro molecular engineering and high-throughput screening tool. It uses lasers or optical projection systems to drive precise chemical reactions—such as photolabile deprotection—to synthesize and screen massive pools of abiotic nucleic acids on a solid support.

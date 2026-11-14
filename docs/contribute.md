@@ -11,7 +11,8 @@ To avoid duplicates, please search the existing issues before creating a new one
 ## Casual Contributors
 
 If you are not familiar with Git or Github, but would like to make a small contribution, please
-follow the steps in the [Feedback section](#feedback), then paste your addition into the issue.
+follow the steps in the [Feedback section](#feedback), then paste your proposed addition(s) in the
+Github issue.
 
 ## Developer Contributors
 
@@ -33,11 +34,3 @@ to call out any content that requires further attention.
 Help reviewing and merging pull requests is appreciated.
 
 Trusted, frequent contributors will be granted elevated priviledges to do this.
-
-## Automated Contributions
-
-To automate the process of identifying new content, a tool will be setup with a list of sources to
-periodically scan, compare against known information, and summarize for further review. The project
-for this tool can be found [here](https://github.com/molecularprogrammer/content-collector).
-Note that this is just the source code; access to the deployed version is not shared, since it is
-not free to run, and there is currently no funding for this knowledgebase.

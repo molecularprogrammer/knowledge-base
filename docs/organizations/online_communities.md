@@ -14,11 +14,17 @@
 - [Molecular Programming Slack Workspace](https://molecular-programming.slack.com/)
   - Collaborative workspace for researchers and students in the molecular programming community
 
+- [Molpigs Bluesky](https://bsky.app/profile/molpigs.bsky.social)
+  - Molecular programming interest group social media page
+
 - [OpenWetWare Synthetic Biology Forum](https://openwetware.org/wiki/Synthetic_Biology:Community_Portal)
   - Wiki-based platform for sharing protocols, resources, and discussions related to synthetic biology
 
 - [r/atomicallyprecise Subreddit](https://www.reddit.com/r/atomicallyprecise/)
   - Reddit community for sharing news, research, and discussions on Atomically Precise Manufacturing (APM)
+
+- [r/NanoFabricators Subreddit](https://www.reddit.com/r/NanoFabricators/)
+  - Reddit community for the development of the first "print anything" machines.
 
 ## Mailing Lists and Newsletters
 

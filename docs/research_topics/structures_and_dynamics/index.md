@@ -1,0 +1,1 @@
+Assembly algorithms, geometric models, graph theory, thermodynamics, structural design tools, and assembly simulation; Chemical reaction network theory, stochastic processes, kinetic modeling, model checking, and reaction simulators.

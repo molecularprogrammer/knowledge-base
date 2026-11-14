@@ -1,0 +1,1 @@
+ interactions with outside world; Biological compatibility, device integration, experimental characterization, sensing models, and application-specific design tools.

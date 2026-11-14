@@ -1,0 +1,3 @@
+Focus: Managing the physical and electronic boundaries where organic molecules meet inorganic materials, ferromagnetic contacts, or external hardware leads.
+
+Initial Content: A critical bottleneck in molecular spintronics is the molecule-electrode interface, where spin polarization must be efficiently injected, transferred, or filtered across hybrid material boundaries. This interface dictates how spin-polarized currents flow between organic semiconductors and ferromagnetic substrates. Optimizing these hybrid boundaries is essential for developing functional bio-electronic devices that translate molecular or biological events into robust, spin-based electronic signals.

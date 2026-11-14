@@ -1,0 +1,3 @@
+Focus: Integrating microfluidic channels with optical projection systems (like digital micromirror device or DMD projectors).
+
+Initial Content: The intersection of fluid flow and light. This setup allows researchers to deliver precise spatial and temporal pulses of light to specific droplets or flowing cells, triggering photo-activatable DNA, optogenetic switches, or localized photochemical reactions on demand.
