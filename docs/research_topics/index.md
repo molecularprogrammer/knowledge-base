@@ -118,7 +118,8 @@ to physically largest in scale.
 - **System Biology and Molecular Pathways**
     - Designing complex biochemical pathways and metabolic networks
     - Systems biology approaches to understand molecular interactions
-    - Engineering cellular systems for specific outcomes (e.g., biofuel production, therapeutic compounds)
+    - Engineering cellular systems for specific outcomes (e.g., biofuel production, therapeutic
+      compounds)
 - **Biocircuitry and Network Engineering**
     - Creating engineered gene networks and biochemical circuits
     - Interfacing biological and synthetic circuits for hybrid systems

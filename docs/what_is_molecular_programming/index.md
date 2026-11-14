@@ -1,6 +1,6 @@
 # Overview
 
-A high-level overview of the field, and some specific examples of how it can be applied
+A high-level overview of the field, and a few specific examples of how it can be applied
 now or with future advancements.
 
 ## What is Molecular Programming?
