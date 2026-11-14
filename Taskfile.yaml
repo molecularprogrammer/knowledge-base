@@ -28,3 +28,33 @@ tasks:
     desc: Enter this container
     cmds:
       - bash
+
+  _docs-run:
+    internal: true
+    dir: '{{.TASKFILE_DIR}}'
+    vars:
+      DOCKER_MOUNT_PATH: '{{.HOST_PWD}}{{ trimPrefix "/workspace" .TASKFILE_DIR }}'
+    cmds:
+    - echo TASKFILE_DIR {{.TASKFILE_DIR}}
+    - echo HOST_PWD {{.HOST_PWD}}
+    - echo DOCKER_MOUNT_PATH {{.DOCKER_MOUNT_PATH}}
+    - DOCKER_MOUNT_PATH="{{.DOCKER_MOUNT_PATH}}" docker compose run --rm --service-ports properdocs {{.CMD}}
+
+  docs:build:
+    desc: "Build the documentation into a static website"
+    cmds:
+      - task: _docs-run
+        vars: { CMD: "properdocs build"}
+
+  docs:serve:
+    desc: "Run Properdocs server"
+    cmds:
+      - task: _docs-run
+        vars: { CMD: "properdocs serve --dev-addr=0.0.0.0:8000"}
+
+  docs:bash:
+    desc: "Build the documentation into a static website"
+    cmds:
+      - task: _docs-run
+        vars: { CMD: "bash"}
+

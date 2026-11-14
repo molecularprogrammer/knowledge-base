@@ -3,7 +3,7 @@ services:
     profiles: [cline-proxy]
     container_name: ai-proxy
     networks: [agent-mesh]
-    image: ${PROXY_IMAGE:-ghcr.io/molecularprogrammer/ai-proxy:sha-25bcf3923740d1a3c6fcb2f3d5abb6f9cb064005}
+    image: ${PROXY_IMAGE:-ghcr.io/molecularprogrammer/ai-proxy:sha-57bcd05b68c32d5e6f15a5d0f0df8da116803b66}
     env_file:
       - path: .cline/.env
         required: false
@@ -16,23 +16,40 @@ services:
     restart: unless-stopped
 
   container-base:
-    image: ${TOOLCHAIN_IMAGE:-ghcr.io/molecularprogrammer/container-base:sha-25bcf3923740d1a3c6fcb2f3d5abb6f9cb064005}
+    image: ${TOOLCHAIN_IMAGE:-ghcr.io/molecularprogrammer/container-base:sha-57bcd05b68c32d5e6f15a5d0f0df8da116803b66}
     user: "${HOST_UID}:${HOST_GID}"
     group_add:
-      - "${HOST_DOCKER_GID:-999}"
+      - "${HOST_DOCKER_GID:?Set HOST_DOCKER_GID to the Docker socket group ID}"
+    security_opt:
+      - no-new-privileges:true
     volumes:
       - .:/workspace
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ${SSH_AUTH_SOCK}:/ssh-agent
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ${SSH_AUTH_SOCK:-/dev/null}:/ssh-agent
     environment:
       - HOST_UID=${HOST_UID}
       - HOST_GID=${HOST_GID}
       - HOST_PWD=${HOST_PWD}
+      - HOST_DOCKER_GID=${HOST_DOCKER_GID:?Set HOST_DOCKER_GID to the Docker socket group ID}
       - SSH_AUTH_SOCK=/ssh-agent
       - GIT_SSH_COMMAND=ssh -o StrictHostKeyChecking=accept-new
       - CLINE_USE_PROXY=${CLINE_USE_PROXY:-0}
+
+  properdocs:
+    image: ghcr.io/molecularprogrammer/container-properdocs:latest
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+    security_opt:
+      - no-new-privileges:true
+    ports:
+      - "8000:8000"
+    volumes:
+      - ${DOCKER_MOUNT_PATH:-.}:/workspace
+    environment:
+      - HOST_UID=${HOST_UID:-1000}
+      - HOST_GID=${HOST_GID:-1000}
 
 networks:
   agent-mesh:
     name: agent-mesh
     external: true
+
