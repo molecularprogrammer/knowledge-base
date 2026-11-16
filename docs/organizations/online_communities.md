@@ -1,5 +1,13 @@
 # Online Communities
 
+## This Knowledge Base Community
+
+If you have a question where the answer would might be best preserved in this knowledge base,
+consider [submitting a change request](../contribute.md#feedback).
+
+For casual discussions within the community that uses this knowledge base, use the project repo's
+[Discussions Page](https://github.com/molecularprogrammer/knowledge-base/discussions)
+
 ## Forums
 
 - [DNA Nanotechnology Google Group](https://groups.google.com/g/dna-nanotechnology)
@@ -14,11 +22,19 @@
 - [Molecular Programming Slack Workspace](https://molecular-programming.slack.com/)
   - Collaborative workspace for researchers and students in the molecular programming community
 
+- [Molpigs Bluesky](https://bsky.app/profile/molpigs.bsky.social)
+  - Molecular programming interest group social media page
+
 - [OpenWetWare Synthetic Biology Forum](https://openwetware.org/wiki/Synthetic_Biology:Community_Portal)
-  - Wiki-based platform for sharing protocols, resources, and discussions related to synthetic biology
+  - Wiki-based platform for sharing protocols, resources, and discussions related to synthetic
+    biology
 
 - [r/atomicallyprecise Subreddit](https://www.reddit.com/r/atomicallyprecise/)
-  - Reddit community for sharing news, research, and discussions on Atomically Precise Manufacturing (APM)
+  - Reddit community for sharing news, research, and discussions on Atomically Precise Manufacturing
+    (APM)
+
+- [r/NanoFabricators Subreddit](https://www.reddit.com/r/NanoFabricators/)
+  - Reddit community for the development of the first "print anything" machines.
 
 ## Mailing Lists and Newsletters
 

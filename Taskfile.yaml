@@ -1,0 +1,60 @@
+version: "3"
+
+includes:
+  cline:
+    taskfile: ./.cline/Taskfile.yaml
+    flatten: false
+
+tasks:
+
+  default:
+    desc: Show available tasks
+    cmds:
+      - task --list
+
+  install:
+    desc: Install project template files, overwriting any existing files.
+    dir: /workspace
+    required:
+      vars: [tag]
+    cmds:
+      - echo "Copying project template files..."
+      - cp -a /project_template/. .
+      - echo "Pinning container image versions..."
+      - sed -i 's/<tag>/{{.tag}}/g' compose.yaml
+      - sed -i 's/<tag>/{{.tag}}/g' documentation/compose.yaml
+
+  bash:
+    desc: Enter this container
+    cmds:
+      - bash
+
+  _docs-run:
+    internal: true
+    dir: '{{.TASKFILE_DIR}}'
+    vars:
+      DOCKER_MOUNT_PATH: '{{.HOST_PWD}}{{ trimPrefix "/workspace" .TASKFILE_DIR }}'
+    cmds:
+    - echo TASKFILE_DIR {{.TASKFILE_DIR}}
+    - echo HOST_PWD {{.HOST_PWD}}
+    - echo DOCKER_MOUNT_PATH {{.DOCKER_MOUNT_PATH}}
+    - DOCKER_MOUNT_PATH="{{.DOCKER_MOUNT_PATH}}" docker compose run --rm --service-ports properdocs {{.CMD}}
+
+  docs:build:
+    desc: "Build the documentation into a static website"
+    cmds:
+      - task: _docs-run
+        vars: { CMD: "properdocs build"}
+
+  docs:serve:
+    desc: "Run Properdocs server"
+    cmds:
+      - task: _docs-run
+        vars: { CMD: "properdocs serve --dev-addr=0.0.0.0:8000"}
+
+  docs:bash:
+    desc: "Build the documentation into a static website"
+    cmds:
+      - task: _docs-run
+        vars: { CMD: "bash"}
+

@@ -24,7 +24,8 @@ Predicting and modeling atomic interactions in materials and biological systems.
 Designing molecular systems by simulating their atomic-level behaviors.
 Investigating quantum effects and atomic-scale dynamics.
 Example Tools:
-GROMACS: A molecular dynamics simulation software, often used for protein, lipid, and nucleic acid systems.
+GROMACS: A molecular dynamics simulation software, often used for protein, lipid, and nucleic acid
+systems.
 LAMMPS: Molecular dynamics software for simulating atomic-level interactions in various materials.
 NAMD: A molecular dynamics tool for large biomolecular systems.
 4. Quantum Chemistry Software
@@ -40,7 +41,8 @@ Q-Chem: A comprehensive software package for quantum chemistry calculations.
 5. X-ray Crystallography
 Function: A technique used to determine the atomic and molecular structure of a crystal.
 Applications:
-Determining the 3D arrangement of atoms in crystalline materials and biological molecules (e.g., proteins, DNA).
+Determining the 3D arrangement of atoms in crystalline materials and biological molecules (e.g.,
+proteins, DNA).
 Resolving atomic-level structural details for drug design and material engineering.
 Example Tools:
 Bruker D8: A commercial X-ray diffraction system used for structural analysis.
@@ -55,7 +57,8 @@ Example Tools:
 JEOL Electron Microscopes: Advanced tools for high-resolution imaging at the atomic scale.
 FEI Tecnai: A brand of transmission electron microscopes used in atomic-scale imaging.
 7. Nuclear Magnetic Resonance (NMR) Spectroscopy
-Function: A tool for determining the atomic structure of molecules by observing nuclear magnetic resonance.
+Function: A tool for determining the atomic structure of molecules by observing nuclear magnetic
+resonance.
 Applications:
 Probing atomic interactions in small molecules, proteins, and nucleic acids.
 Investigating atomic dynamics and molecular conformations in solution.
@@ -66,7 +69,8 @@ JEOL JNM: High-resolution NMR systems for atomic-scale analysis.
 Function: Computational tools designed for modeling atomic interactions in materials.
 Applications:
 Modeling atomic-level properties of materials, such as semiconductors or catalysts.
-Designing materials at the atomic level for specific properties (e.g., superconductivity, magnetism).
+Designing materials at the atomic level for specific properties (e.g., superconductivity,
+magnetism).
 Example Tools:
 VASP: A computational tool for performing quantum mechanical simulations of atomic systems.
 Quantum ESPRESSO: A suite of programs for atomic-scale simulations of materials.
@@ -85,5 +89,8 @@ Investigating the behavior of single molecules in biological or synthetic enviro
 Understanding the dynamics of molecular motors and machines.
 Example Tools:
 Optical Tweezers: Laser-based tools used for trapping and manipulating single molecules.
-Single-Molecule Fluorescence Microscopy: A technique for imaging and studying single molecules in real-time.
-These atomic-scale tools allow for the study, design, manipulation, and programming of molecular systems at an unprecedented level of precision. They are foundational for advancements in molecular programming and the development of new materials, machines, and technologies.
+Single-Molecule Fluorescence Microscopy: A technique for imaging and studying single molecules in
+real-time.
+These atomic-scale tools allow for the study, design, manipulation, and programming of molecular
+systems at an unprecedented level of precision. They are foundational for advancements in molecular
+programming and the development of new materials, machines, and technologies.
