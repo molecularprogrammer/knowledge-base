@@ -3,7 +3,7 @@ site_description: Molecular programming news, fundamentals, tutorials, and more
 site_url: https://docs.molecularprogrammer.org
 repo_url: https://github.com/molecularprogrammer/knowledge-base
 repo_name: molecularprogrammer/knowledge-base
-docs_dir: docs/
+docs_dir: knowledge_base/
 site_dir: site/
 
 theme:
