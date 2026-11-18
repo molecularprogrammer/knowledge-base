@@ -1,198 +1,106 @@
-# Knowledge Base Compiler Design
+# Compiler Design
+
+**UID:** `MPKB-COMP-DES-001`
 
 **Status:** Proposed
 
-**Scope:** Compile canonical knowledge-base Markdown into validated, structured representations.
+**Scope:** Allocate the [compiler requirements](requirements.md) to the compiler core, its
+ProperDocs integration, and generated representations.
 
 ## 1. Purpose
 
-The compiler gives the knowledge base a consistent information model and detects broken structure
-before publication. It reads Markdown and YAML metadata, validates them against the
-[knowledge schema](knowledge-schema.md), resolves references across the repository, and emits
-deterministic machine-readable artifacts.
+The compiler is the boundary between canonical knowledge and machine-readable representations. It
+provides one place to validate knowledge integrity and assemble document- and section-level records
+before the repository is published.
 
-Markdown in Git remains authoritative. The compiler does not own knowledge, render the website, run a
-search service, or implement an AI protocol. ProperDocs currently builds the human-facing site.
-Search, APIs, and MCP may consume compiler outputs independently.
+Repository source remains authoritative. ProperDocs renders the human-facing site; compiler outputs
+serve independent consumers. Neither the renderer nor a downstream search or AI protocol owns the
+knowledge model.
 
-## 2. Requirements
+## 2. Architecture
 
-The compiler MUST:
+The compiler has three logical parts:
 
-- Validate front matter, identifiers, enumerated values, dates, heading IDs, heading hierarchy, and
-  metadata field types against the versioned schema.
-- Detect duplicate IDs, unresolved internal references, invalid parent hierarchies, and conflicting
-  definitions of shared source IDs.
-- Preserve document metadata, document preambles, section content, heading order and levels,
-  ancestor relationships, provenance, and typed relationships.
-- Produce deterministic, versioned JSON representations from the same inputs.
-- Report actionable diagnostics that identify the file and relevant field, heading, or identifier.
-- Fail the build when structured data is invalid; never silently drop invalid or unsupported data.
-- Leave canonical Markdown unchanged.
+- **Source model:** Markdown documents plus their structured metadata and the maintained topic
+  vocabulary.
+- **Compiler core:** parses the source model, checks local and repository-wide integrity, and builds
+  document, section, relationship, and provenance records.
+- **ProperDocs adapter:** invokes the core during a site build, reports diagnostics through the build
+  system, and places successful compiled artifacts in the published site output.
 
-The compiler SHOULD run locally and in CI using the same validation rules. Its core MUST NOT depend
-on ProperDocs, MkDocs, StrictDoc, MCP, a search engine, or a language model.
+The core owns parsing-independent validation and record construction. The adapter owns build-lifecycle
+integration and output placement. The knowledge schema and output contract are specified in
+[Compiler Implementation](implementation.md).
 
-## 3. Boundaries and interactions
+### 2.1 Context and interactions
 
 ```text
-Canonical Markdown + schema + topic vocabulary
-                    |
-                    v
-               Compiler
-              /        \
-             v          v
-  ProperDocs build   JSON artifacts
-                         |
-                 search / API / MCP
+Authors --> Canonical Markdown + metadata + topic vocabulary
+                              |
+                              v
+                    ProperDocs build hook
+                              |
+                     Compiler core
+                     /            \
+          build diagnostics     JSON artifacts
+                                     |
+                             search / API / MCP
 ```
 
-- **Knowledge authors** edit Markdown and front matter in Git.
-- **The compiler** parses source, validates the global model, and writes generated artifacts.
-- **ProperDocs** renders human-facing documentation from Markdown. It does not define or amend the
-  canonical metadata model.
-- **Artifact consumers** read documented JSON outputs. Search, API, and MCP implementations are
-  replaceable consumers and are outside this compiler's runtime boundary.
-- **CI** runs the compiler before site publication and prevents publication when compilation fails.
+- Authors edit canonical Markdown and metadata in Git.
+- The ProperDocs adapter invokes the compiler as part of the normal site build.
+- ProperDocs renders the site and presents compiler diagnostics. A compiler error fails the build.
+- The compiler emits versioned artifacts alongside the built site for static hosting and independent
+  consumption.
+- Search, APIs, and MCP are replaceable consumers outside the compiler boundary. They read compiled
+  artifacts and do not affect source validation.
 
-The compiler owns the contract between source files and compiled representations. Interfaces among
-ProperDocs, artifact consumers, and hosting services remain owned by their respective designs.
+The compiler owns the contract between canonical source and compiled records. The ProperDocs adapter
+is the only compiler component coupled to ProperDocs. It enforces the integrity and diagnostic
+requirements at the publication boundary while keeping the core reusable for local checks and other
+consumers.
 
-## 4. Inputs and outputs
+### 2.2 Build lifecycle
 
-### 4.1 Inputs
+ProperDocs supports local Python hook scripts configured in `properdocs.yml`. The global `on_files`
+hook provides the build-wide integration point for validation. It stages artifacts inside the site
+build directory; a post-build hook publishes the completed artifact set by updating its publication
+marker only after successful site generation. This avoids a separate validation command and prevents
+partially built data from being published. CI uploads and deploys only after the build succeeds, so a
+failed build cannot replace the currently deployed site with incomplete artifacts.
+The compiler core reads the configured documentation root rather than relying only on ProperDocs'
+file collection, so excluded Markdown files are also validated. Hook details and version-specific
+behavior are specified in [Compiler Implementation](implementation.md).
 
-The compiler receives:
+The hook adapter shall be thin: it translates compiler diagnostics into ProperDocs build errors and
+does not define schema rules. Hook configuration, lifecycle state, and output paths are detailed in
+[Compiler Implementation](implementation.md).
 
-1. A root directory containing Markdown knowledge documents.
-2. The source schema version declared in each document's front matter.
-3. A maintained topic vocabulary supplied as repository data.
-4. An output directory and an explicit validation mode.
+### 2.3 Alternatives and rationale
 
-The initial implementation uses the repository's `docs/` directory as the input set. It excludes
-non-Markdown files and site-generated files. It MUST discover documents deterministically and MUST
-not follow symlinks outside the configured root.
+- **Separate command run before ProperDocs:** provides a clear standalone entry point, but duplicates
+  build orchestration and allows contributors to build the site without the integrity check. A
+  separate command may be added later for editor feedback, but it is not the publication gate.
+- **ProperDocs plugin package:** provides reusable distribution, but adds packaging and installation
+  work for an integration used by this repository alone. A configured hook script is sufficient for
+  the initial adapter.
+- **Schema implemented inside the hook:** is simple initially, but couples the knowledge contract to
+  one renderer and makes independent testing and consumption harder. The schema and compiler core
+  remain independent; only the adapter uses ProperDocs APIs.
 
-### 4.2 Outputs
+This choice follows the current build environment, which already runs ProperDocs. It also keeps the
+schema independent of ProperDocs, MkDocs, StrictDoc, MCP, search software, and language models, as
+required by the [interoperability requirement](requirements.md#interoperability-and-reproducibility).
 
-The initial compiled format is versioned JSON. It MUST include logical representations for:
+## 3. Boundaries and constraints
 
-- **Documents:** IDs, metadata, source paths for diagnostics/navigation, and preamble content.
-- **Sections:** IDs, owning document IDs, titles, heading levels, ordered ancestor IDs, source order,
-  and section Markdown content.
-- **Relationships:** typed source and target IDs, including parent hierarchy and provenance links.
-- **Sources:** normalized provenance records and their source-document associations.
-- **Manifest:** source schema version(s), output format version, compiler version, and inventory of
-  generated artifacts.
-
-One JSON file per logical collection is a suitable initial layout. Exact filenames are an output
-format decision and MUST be recorded with the format version. Search indexes and summaries are
-later derived artifacts; they MUST NOT become canonical or be prerequisites for validating source.
-
-All JSON output MUST be UTF-8, stable-key ordered where applicable, and deterministic for identical
-inputs and compiler versions. Output paths MUST be documented. Generated files MUST be written only
-to the configured output directory.
-
-## 5. Compilation flow
-
-The compiler runs these stages in order:
-
-1. **Discover:** collect Markdown files under the configured root in stable path order.
-2. **Parse:** read UTF-8 source, separate front matter from body, parse YAML, and extract headings,
-   explicit IDs, and Markdown ranges for the document preamble and sections.
-3. **Validate local records:** check metadata shape, schema version, field types, identifiers,
-   allowed values, dates, duplicate fields/keys, and per-document heading order and hierarchy.
-4. **Build the model:** create document, section, source, and relationship records while retaining
-   source locations for diagnostics.
-5. **Validate global invariants:** check ID uniqueness, target resolution, parent cycles, and shared
-   source consistency.
-6. **Serialize:** if there are no errors, write the complete, deterministic JSON artifact set and
-   manifest. Do not leave a partially updated artifact set on failure.
-
-Parsing and validation do not modify source files. Consumers MUST treat outputs from a failed
-compilation as invalid; the compiler SHOULD stage files and replace the previous output set only
-after successful compilation.
-
-## 6. Diagnostics and exit behavior
-
-Each diagnostic includes a severity, stable code, message, source file, and—when available—line,
-field path, heading, or affected ID. Messages SHOULD state the corrective action. Diagnostics are
-deterministically ordered by file, source position, and code.
-
-- **Error:** compilation cannot produce a valid model; exit non-zero and do not publish new outputs.
-- **Warning:** content may be valid but needs attention; exit success unless strict warning policy is
-  enabled.
-- **Informational:** migration or summary information; does not affect exit status.
-
-Malformed front matter, missing required fields, duplicate IDs, unknown required vocabulary values,
-unresolved references, and invalid heading hierarchy are errors. Link checks to external URLs are
-optional warnings only; network access is not required for a successful compilation.
-
-## 7. Legacy content migration
-
-The current repository contains Markdown files without schema front matter or explicit heading IDs.
-Migration is therefore a prerequisite to enforcing strict compilation over all `docs/` content.
-
-The compiler MAY provide a **migration report** mode that lists missing metadata and proposed IDs,
-but proposed IDs are suggestions only. A maintainer assigns and commits stable IDs explicitly.
-Generated IDs MUST NOT be written into source automatically because path- or heading-derived IDs can
-change when content moves or is renamed.
-
-Rollout proceeds in stages:
-
-1. Define and review the schema and compiler contract.
-2. Add schema-compliant metadata and stable heading IDs to existing documents, preserving current
-   content and links.
-3. Run validation in reporting mode during migration and resolve every error.
-4. Enable strict validation in local build tasks and CI.
-5. Generate and publish machine-readable artifacts with the site or as separately consumable static
-   files.
-
-There is no permanent silent fallback for legacy documents. Once strict mode is enabled, every
-knowledge document in the configured root must conform.
-
-## 8. Testing and acceptance
-
-The compiler is acceptable for strict CI use when tests demonstrate that:
-
-- Valid source compiles to the documented JSON format, and repeated runs produce byte-identical
-  artifacts.
-- Missing or malformed front matter, wrong types, unknown fields/values, invalid dates, and
-  unsupported schema versions fail with source-specific diagnostics.
-- Duplicate document, section, and source IDs are detected across files.
-- Heading IDs remain unchanged when heading titles change; missing IDs and skipped heading levels
-  fail validation.
-- Document, section, parent, relationship, and provenance targets resolve correctly; missing
-  targets and parent cycles fail validation.
-- Section records preserve document ID, heading hierarchy, order, title, content, and source data.
-- A failure does not replace a previously valid artifact set with partial outputs.
-- Compiled JSON can be consumed without loading ProperDocs or an MCP implementation.
-- The site and compiler builds both fail in CI when their required validation fails.
-
-Tests SHOULD use small fixture repositories that cover one invariant at a time, plus an integration
-fixture with nested sections, relationships, and provenance.
-
-## 9. Delivery phases
-
-1. **Schema and model:** finalize the source contract and topic vocabulary; record open vocabulary
-   ownership decisions.
-2. **Minimum compiler:** implement parsing, schema validation, stable section extraction, global
-   reference checks, diagnostics, and deterministic JSON generation.
-3. **Repository migration:** add explicit metadata and IDs to existing knowledge documents and
-   enable strict CI validation.
-4. **Consumer integration:** publish generated artifacts and connect static search or other
-   consumers as separate components.
-5. **Optional extensions:** evaluate summaries, semantic search, API, and MCP independently. These
-   must consume the canonical compiled model and must not change its ownership.
-
-## 10. Open decisions
-
-- Where and how the controlled topic vocabulary is maintained and reviewed.
-- The compiler implementation language and Markdown/YAML parser, chosen to fit the repository's
-  build environment and parser behavior.
-- Exact artifact filenames and output location for the first output-format version.
-- Whether document type and lifecycle vocabularies need additional values before migration.
-- How compiler and artifact-format versions are exposed in the repository's build tooling.
-
-Resolve these decisions before declaring the output format stable. Do not make a documentation
-generator, StrictDoc, or MCP a canonical dependency while doing so.
+- The core may use Markdown and YAML libraries available to the implementation, but it shall not call
+  ProperDocs APIs.
+- The adapter may use ProperDocs hook APIs, but it shall not change canonical source or schema
+  semantics.
+- Generated files are build outputs, not source records. They shall be recreated from canonical
+  inputs and shall not be edited by consumers.
+- External URL availability is not an input to successful compilation; the build must not require
+  network access to validate provenance.
+- The knowledge base is not a requirements-management system. Its schema is for broad scientific and
+  technical knowledge, not only formal engineering requirements.
