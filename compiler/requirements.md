@@ -1,8 +1,6 @@
 # Compiler Requirements
 
-**Status:** Proposed
-
-## 1. Purpose and scope
+## Purpose and scope
 
 The compiler shall make knowledge-base content reliable for human readers and machine consumers. It
 shall preserve the repository's human-readable knowledge while providing a trustworthy structured
@@ -10,10 +8,7 @@ representation. These requirements apply to the compiler and its outputs. The co
 structured, language-model-friendly data. It does not provide a search service or an AI protocol
 endpoint.
 
-The terms **shall**, **shall not**, **should**, and **may** express requirements at the strength
-stated.
-
-## 2. Requirements
+## Requirements
 
 ### Canonical knowledge
 
@@ -53,14 +48,14 @@ stated.
   AI protocol.
 - The compiler shall support consistent validation in contributor and publication workflows.
 
-## 3. Exclusions
+## Exclusions
 
 The compiler does not provide a search interface, search API, or MCP server. Search, retrieval,
 question-answering, and language-model services are outside its scope. The compiler does not need to
 generate summaries or FAQ content. If summaries are produced by a later consumer, they remain derived
 data and shall not replace canonical content.
 
-## 4. Related documents
+## Related documents
 
 [Compiler Design](design.md) describes the architecture. [Compiler Implementation](implementation.md)
 defines the source schema, output format, and verification plan.

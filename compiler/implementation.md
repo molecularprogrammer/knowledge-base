@@ -10,7 +10,7 @@ This document specifies the source schema, compiler behavior, ProperDocs hook co
 format, migration, and verification plan. These choices are proposed implementation details; they do
 not change the architecture or the requirements.
 
-## 1. Source schema
+## Source schema
 
 **Schema version:** `1.0.0`
 
@@ -21,7 +21,7 @@ define this schema.
 The terms **MUST**, **MUST NOT**, **SHOULD**, and **MAY** express requirements at the strength
 stated.
 
-### 1.1 Source document format
+### Source document format
 
 A knowledge document is a UTF-8 Markdown file with one YAML front matter block at the start of the
 file, followed by its Markdown body:
@@ -62,7 +62,7 @@ configured topic vocabulary. Existing files without front matter or explicit hea
 content. Migration procedures are in [Section 6](#6-legacy-content-migration). A compiler MUST NOT
 silently invent stable IDs from filenames or heading text.
 
-### 1.2 Identifier model
+### Identifier model
 
 All identifiers are case-sensitive, stable across edits, and globally unique across document,
 section, and source records. An identifier MUST match:
@@ -79,7 +79,7 @@ entity is removed, its identifier MUST NOT be reused.
 - A section ID identifies one heading and its section body independent of heading text and path.
 - A source ID identifies one provenance record within the knowledge base.
 
-### 1.3 Document metadata
+### Document metadata
 
 The top-level YAML value MUST be a mapping. The following fields are defined:
 
@@ -131,7 +131,7 @@ The initial status values are:
 `reviewed`, `valid_from`, and `valid_until` are calendar dates, not timestamps. If both validity
 dates are present, `valid_from` MUST be earlier than or equal to `valid_until`.
 
-### 1.4 Section model
+### Section model
 
 Every Markdown heading in a conforming document MUST have an explicit stable ID using the
 attribute-list syntax `{#<identifier>}` on the same line as the heading. Heading IDs share the
@@ -149,7 +149,7 @@ preserved; it is not assigned a section ID unless a later schema revision explic
 Sections are addressable by their stable IDs and MUST be retrievable independently. Heading text
 changes MUST NOT change section identity.
 
-### 1.5 References and relationships
+### References and relationships
 
 A target reference is either a document ID or a section ID. References MUST use canonical IDs,
 never only filenames, relative paths, or heading text. Every internal target MUST resolve to exactly
@@ -179,7 +179,7 @@ field, not duplicated as a relationship. A parent MUST resolve to a document ID;
 hierarchy are invalid. New relationship types require a schema revision that defines their
 direction and semantics.
 
-### 1.6 Provenance records
+### Provenance records
 
 Each `sources` item MUST be a mapping with a unique `id` and at least one locator (`url` or
 `citation`). Supported fields are:
@@ -200,7 +200,7 @@ compiler reports a conflicting definition. Source records identify provenance, b
 themselves assert that every statement in a document is supported by that source. Assertion-level
 annotations are outside this initial schema version.
 
-### 1.7 Validation and canonical source rules
+### Validation and canonical source rules
 
 A conforming source MUST:
 
@@ -216,7 +216,7 @@ derived artifacts. A build MUST fail on errors that make the structured model in
 identify the source file and field, ID, or heading involved. It MUST preserve the metadata and
 structure defined here in its outputs.
 
-### 1.8 Schema versioning and compatibility
+### Schema versioning and compatibility
 
 `schema_version` uses `MAJOR.MINOR.PATCH` semantic version syntax:
 
@@ -233,9 +233,9 @@ source changes reviewed and committed with the content; they MUST preserve stabl
 relationships. Generated output formats have their own version, independent of this source schema
 version.
 
-## 2. Compilation behavior
+## Compilation behavior
 
-### 2.1 Inputs and dependencies
+### Inputs and dependencies
 
 The initial implementation targets the repository's verified ProperDocs environment: Python 3.12,
 ProperDocs 1.6.7, PyYAML 6.0.3 for front matter parsing, and Python-Markdown 3.11.1 for Markdown
@@ -253,7 +253,7 @@ The compiler walks the configured documentation root, including Markdown files t
 exclude from rendering. It discovers files deterministically, does not follow symlinks outside the
 root, and does not read generated site files.
 
-### 2.2 Compilation stages
+### Compilation stages
 
 The compiler runs these stages in order:
 
@@ -272,7 +272,7 @@ The compiler runs these stages in order:
 Parsing and validation do not modify source files. Consumers MUST treat outputs from a failed
 compilation as invalid.
 
-### 2.3 Diagnostics
+### Diagnostics
 
 Each diagnostic includes a severity, stable code, message, source file, and—when available—line,
 field path, heading, or affected ID. Messages SHOULD state the corrective action. Diagnostics are
@@ -288,7 +288,7 @@ Malformed front matter, missing required fields, duplicate IDs, unknown required
 unresolved references, and invalid heading hierarchy are errors. Compilation performs no network
 requests to validate external URLs.
 
-## 3. ProperDocs hook integration
+## ProperDocs hook integration
 
 ProperDocs hook scripts are Python files listed in `properdocs.yml`; paths are relative to that
 configuration file. A hook script defines event-handler functions without `self`. The initial
@@ -337,7 +337,7 @@ ProperDocs hooks use the same event-handler names and return contracts as plugin
 scripts rather than installed plugin packages. See the [ProperDocs hook configuration](https://properdocs.org/user-guide/configuration/#hooks)
 and [plugin event documentation](https://properdocs.org/dev-guide/plugins/#events).
 
-## 4. Compiled output format
+## Compiled output format
 
 Output format version `1.0.0` uses this layout:
 
@@ -371,7 +371,7 @@ compiler. The compiler produces structured data, not a search index or service, 
 API, or AI protocol endpoint.
 Generated artifacts are never committed as canonical source.
 
-## 5. Implementation decisions to resolve
+## Implementation decisions to resolve
 
 Resolve these before declaring the output format stable:
 
@@ -383,7 +383,7 @@ Resolve these before declaring the output format stable:
 - Whether the ProperDocs version in CI matches the documented hook API and behavior under both
   `build` and `serve`.
 
-## 6. Legacy content migration
+## Legacy content migration
 
 The current knowledge documents do not all have schema front matter or explicit heading IDs.
 Migration is a prerequisite to strict compilation of the complete configured source root.
@@ -405,9 +405,9 @@ Rollout proceeds in stages:
 There is no permanent silent fallback for legacy documents. Once strict mode is enabled, every
 knowledge document in the configured source root must conform.
 
-## 7. Test plan
+## Test plan
 
-### 7.1 Unit tests
+### Unit tests
 
 Use focused fixture documents to verify:
 
@@ -422,7 +422,7 @@ Use focused fixture documents to verify:
   correctly; missing targets, conflicting source definitions, and parent cycles fail.
 - Compilation performs no network requests to validate external URLs.
 
-### 7.2 Compiler integration tests
+### Compiler integration tests
 
 Use small fixture roots to verify:
 
@@ -434,7 +434,7 @@ Use small fixture roots to verify:
   partial output.
 - The generated JSON can be read without importing ProperDocs or a language-model framework.
 
-### 7.3 ProperDocs hook tests
+### ProperDocs hook tests
 
 Run the hook in the same ProperDocs environment used by local development and CI to verify:
 
@@ -446,7 +446,7 @@ Run the hook in the same ProperDocs environment used by local development and CI
 - `properdocs serve` rebuilds do not reuse stale compiler model or diagnostics from a previous build.
 - Strict-mode warning behavior matches the project policy.
 
-### 7.4 Repository acceptance checks
+### Repository acceptance checks
 
 Before strict CI enforcement:
 

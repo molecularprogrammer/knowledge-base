@@ -5,7 +5,7 @@
 **Scope:** Allocate the [compiler requirements](requirements.md) to the compiler core, its
 ProperDocs integration, and generated representations.
 
-## 1. Purpose
+## Purpose
 
 The compiler is the boundary between canonical knowledge and machine-readable representations. It
 provides one place to validate knowledge integrity and assemble document- and section-level records
@@ -15,7 +15,7 @@ Repository source remains authoritative. ProperDocs renders the human-facing sit
 serve independent consumers. Neither the renderer nor a downstream search or AI protocol owns the
 knowledge model.
 
-## 2. Architecture
+## Architecture
 
 The compiler has three logical parts:
 
@@ -30,7 +30,7 @@ The core owns parsing-independent validation and record construction. The adapte
 integration and output placement. The knowledge schema and output contract are specified in
 [Compiler Implementation](implementation.md).
 
-### 2.1 Context and interactions
+### Context and interactions
 
 ```text
 Authors --> Canonical Markdown + metadata + topic vocabulary
@@ -58,7 +58,7 @@ is the only compiler component coupled to ProperDocs. It enforces the integrity 
 requirements at the publication boundary while keeping the core reusable for local checks and other
 consumers.
 
-### 2.2 Build lifecycle
+### Build lifecycle
 
 ProperDocs supports local Python hook scripts configured in `properdocs.yml`. The global `on_files`
 hook provides the build-wide integration point for validation. It stages artifacts inside the site
@@ -74,7 +74,7 @@ The hook adapter shall be thin: it translates compiler diagnostics into ProperDo
 does not define schema rules. Hook configuration, lifecycle state, and output paths are detailed in
 [Compiler Implementation](implementation.md).
 
-### 2.3 Alternatives and rationale
+### Alternatives and rationale
 
 - **Separate command run before ProperDocs:** provides a clear standalone entry point, but duplicates
   build orchestration and allows contributors to build the site without the integrity check. A
@@ -90,7 +90,7 @@ This choice follows the current build environment, which already runs ProperDocs
 schema independent of ProperDocs, MkDocs, StrictDoc, and any particular language model or AI
 protocol. This supports independent consumers without making a consumer part of the compiler.
 
-## 3. Boundaries and constraints
+## Boundaries and constraints
 
 - The core may use Markdown and YAML libraries available to the implementation, but it shall not call
   ProperDocs APIs.
