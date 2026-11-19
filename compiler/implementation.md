@@ -1,7 +1,5 @@
 # Compiler Implementation
 
-**UID:** `MPKB-COMP-IMP-001`
-
 **Status:** Proposed
 
 **Allocates:** [Compiler Requirements](requirements.md)
@@ -17,8 +15,8 @@ not change the architecture or the requirements.
 **Schema version:** `1.0.0`
 
 Markdown remains the authoritative knowledge source. YAML front matter carries document metadata.
-Explicit heading IDs identify sections. Documentation generators, search services, and AI protocols
-consume compiled representations; they do not define this schema.
+generators and independent language-model-based tools consume compiled representations; they do not
+define this schema.
 
 The terms **MUST**, **MUST NOT**, **SHOULD**, and **MAY** express requirements at the strength
 stated.
@@ -369,8 +367,9 @@ discards the duplicate staging directory. A failed compilation or site generatio
 only when `properdocs build` exits successfully. Consumers first read `current.json`, then read only
 files from its referenced immutable artifact set.
 
-Search indexes and summaries are later derived artifacts; they are not canonical and are not
-prerequisites for source validation. Generated artifacts are never committed as canonical source.
+compiler. The compiler produces structured data, not a search index or service, generated summary,
+API, or AI protocol endpoint.
+Generated artifacts are never committed as canonical source.
 
 ## 5. Implementation decisions to resolve
 
@@ -433,7 +432,7 @@ Use small fixture roots to verify:
 - Repeated runs with identical inputs and compiler versions produce byte-identical artifacts.
 - A failed compilation leaves a previously valid published artifact set unchanged and publishes no
   partial output.
-- The generated JSON can be read without importing ProperDocs or an MCP implementation.
+- The generated JSON can be read without importing ProperDocs or a language-model framework.
 
 ### 7.3 ProperDocs hook tests
 

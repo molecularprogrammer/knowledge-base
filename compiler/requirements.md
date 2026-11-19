@@ -1,15 +1,14 @@
 # Compiler Requirements
 
-**UID:** `MPKB-COMP-REQ-001`
-
 **Status:** Proposed
 
 ## 1. Purpose and scope
 
 The compiler shall make knowledge-base content reliable for human readers and machine consumers. It
 shall preserve the repository's human-readable knowledge while providing a trustworthy structured
-representation. These requirements apply to the compiler and its outputs, not to search, API, or AI
-services that may later consume those outputs.
+representation. These requirements apply to the compiler and its outputs. The compiler produces
+structured, language-model-friendly data. It does not provide a search service or an AI protocol
+endpoint.
 
 The terms **shall**, **shall not**, **should**, and **may** express requirements at the strength
 stated.
@@ -18,54 +17,50 @@ stated.
 
 ### Canonical knowledge
 
-- **MPKB-COMP-REQ-002:** The compiler shall treat reviewed, human-readable repository content as the
-  authoritative knowledge source.
-- **MPKB-COMP-REQ-003:** Compiler execution shall not alter canonical source content.
-- **MPKB-COMP-REQ-004:** The compiler shall keep generated representations distinguishable from
-  canonical content and regenerable from that content.
+- The compiler shall treat human-readable repository content as the authoritative knowledge source.
+- Compiler execution shall not alter canonical source content.
+- The compiler shall keep generated representations distinguishable from canonical content and
+  regenerable from source.
 
 ### Structured representation
 
-- **MPKB-COMP-REQ-005:** The compiler shall represent each knowledge document and its addressable
-  sections as structured records.
-- **MPKB-COMP-REQ-006:** The structured representation shall preserve document and section identity,
-  hierarchy, order, content, and relevant descriptive information.
-- **MPKB-COMP-REQ-007:** The structured representation shall preserve defined relationships among
-  knowledge records and the provenance associated with them.
-- **MPKB-COMP-REQ-008:** The compiler shall provide stable identities that do not depend on mutable
-  titles, heading text, or file paths.
-- **MPKB-COMP-REQ-009:** A consumer shall be able to retrieve a section independently and determine
-  its containing document and place in the document hierarchy.
+- The compiler shall represent each knowledge document and its addressable sections as structured
+  records.
+- The structured representation shall preserve document and section identity, hierarchy, order,
+  content, and relevant descriptive information.
+- The structured representation shall preserve defined relationships among knowledge records and
+  their provenance.
+- The compiler shall provide stable identities that do not depend on mutable titles, heading text,
+  or file paths.
+- A consumer shall be able to retrieve a section independently and determine its containing
+  document and place in the document hierarchy.
 
 ### Integrity and diagnostics
 
-- **MPKB-COMP-REQ-010:** The compiler shall detect malformed or incomplete structured records,
-  identity conflicts, invalid hierarchy, and unresolved internal references.
-- **MPKB-COMP-REQ-011:** Diagnostics shall identify the affected source and record or field and shall
-  give enough information to correct the problem.
-- **MPKB-COMP-REQ-012:** Invalid knowledge data shall prevent a successful publication build; the
-  compiler shall not silently discard or reinterpret invalid data.
+- The compiler shall detect malformed or incomplete structured records, identity conflicts, invalid
+  hierarchy, and unresolved internal references.
+- Diagnostics shall identify the affected source and record or field and provide enough information
+  to correct the problem.
+- Invalid knowledge data shall prevent a successful publication build. The compiler shall not
+  silently discard or reinterpret invalid data.
 
 ### Interoperability and reproducibility
 
-- **MPKB-COMP-REQ-013:** The compiler shall produce a documented machine-readable representation
-  suitable for independent consumers.
-- **MPKB-COMP-REQ-014:** Equivalent source and compiler versions shall produce equivalent,
-  deterministic representations.
-- **MPKB-COMP-REQ-015:** The knowledge model shall not depend on a particular documentation renderer,
-  search service, language model, or AI protocol.
-- **MPKB-COMP-REQ-016:** The compiler shall support consistent validation in contributor and
-  publication workflows.
+- The compiler shall produce a documented machine-readable representation that preserves context
+  and is suitable for independent processing, including by language-model-based tools.
+- Equivalent source and compiler versions shall produce equivalent, deterministic representations.
+- The knowledge model shall not depend on a particular documentation renderer, language model, or
+  AI protocol.
+- The compiler shall support consistent validation in contributor and publication workflows.
 
 ## 3. Exclusions
 
-These requirements do not require the compiler to provide a search interface, API, MCP server,
-semantic index, generated summary, or FAQ. Such services may consume compiler outputs under their
-own requirements. Generated summaries shall not replace or become authoritative over canonical
-content.
+The compiler does not provide a search interface, search API, or MCP server. Search, retrieval,
+question-answering, and language-model services are outside its scope. The compiler does not need to
+generate summaries or FAQ content. If summaries are produced by a later consumer, they remain derived
+data and shall not replace canonical content.
 
-## 4. Traceability
+## 4. Related documents
 
-The architecture and allocation of these requirements are defined in
-[Compiler Design](design.md). Concrete source rules, formats, and verification methods are defined
-in [Compiler Implementation](implementation.md).
+[Compiler Design](design.md) describes the architecture. [Compiler Implementation](implementation.md)
+defines the source schema, output format, and verification plan.

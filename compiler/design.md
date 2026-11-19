@@ -1,7 +1,5 @@
 # Compiler Design
 
-**UID:** `MPKB-COMP-DES-001`
-
 **Status:** Proposed
 
 **Scope:** Allocate the [compiler requirements](requirements.md) to the compiler core, its
@@ -44,7 +42,7 @@ Authors --> Canonical Markdown + metadata + topic vocabulary
                      /            \
           build diagnostics     JSON artifacts
                                      |
-                             search / API / MCP
+                       independent language-model tools
 ```
 
 - Authors edit canonical Markdown and metadata in Git.
@@ -52,8 +50,8 @@ Authors --> Canonical Markdown + metadata + topic vocabulary
 - ProperDocs renders the site and presents compiler diagnostics. A compiler error fails the build.
 - The compiler emits versioned artifacts alongside the built site for static hosting and independent
   consumption.
-- Search, APIs, and MCP are replaceable consumers outside the compiler boundary. They read compiled
-  artifacts and do not affect source validation.
+- Independent language-model-based tools may read compiled artifacts. Their user interfaces and
+  retrieval behavior are outside the compiler boundary.
 
 The compiler owns the contract between canonical source and compiled records. The ProperDocs adapter
 is the only compiler component coupled to ProperDocs. It enforces the integrity and diagnostic
@@ -89,8 +87,8 @@ does not define schema rules. Hook configuration, lifecycle state, and output pa
   remain independent; only the adapter uses ProperDocs APIs.
 
 This choice follows the current build environment, which already runs ProperDocs. It also keeps the
-schema independent of ProperDocs, MkDocs, StrictDoc, MCP, search software, and language models, as
-required by the [interoperability requirement](requirements.md#interoperability-and-reproducibility).
+schema independent of ProperDocs, MkDocs, StrictDoc, and any particular language model or AI
+protocol. This supports independent consumers without making a consumer part of the compiler.
 
 ## 3. Boundaries and constraints
 
