@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-028"
+type: article
+title: "Photo Activatable Crispr"
+description: "photo-activatable CRISPR (paCRISPR) fits squarely into the intersection of optogenetics and molecular programming (frequently categorized under synthetic biology and generative optogenetics)."
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 photo-activatable CRISPR (paCRISPR) fits squarely into the intersection of optogenetics and
 molecular programming (frequently categorized under synthetic biology and generative optogenetics).
 The integration of these fields works through two complementary mechanisms:The Optogenetic

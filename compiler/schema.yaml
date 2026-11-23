@@ -1,0 +1,49 @@
+schema_version: "1.0.0"
+document_types:
+  - article
+  - index
+  - tutorial
+  - reference
+  - news
+  - glossary
+  - dataset
+statuses:
+  - draft
+  - in-review
+  - published
+  - deprecated
+  - archived
+relationship_types:
+  - references
+  - related
+  - depends_on
+  - supersedes
+  - supports
+  - contradicts
+topics:
+  - atomic-scale
+  - chemistry
+  - circuits
+  - conferences
+  - computing
+  - construction
+  - dna-nanotechnology
+  - energy
+  - ethics
+  - events
+  - healthcare
+  - interfaces
+  - molecular-scale
+  - nanoscale
+  - organizations
+  - projects
+  - quantum-scale
+  - research-topics
+  - safety
+  - societies
+  - software-tools
+  - space-exploration
+  - structures-and-dynamics
+  - systems
+  - theoretical-foundations
+  - tutorials

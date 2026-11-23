@@ -1,11 +1,24 @@
-# Environmental
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-078"
+type: article
+title: "Environmental"
+description: "Molecular programming is enabling innovative solutions for monitoring, protecting, and restoring the environment."
+topics: ["systems"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
+# Environmental {#mpkb:section:sec-0180}
 
 Molecular programming is enabling innovative solutions for monitoring, protecting, and restoring the
 environment. By leveraging programmable molecules and nanoscale systems, it is possible to detect
 pollutants, mitigate environmental damage, and enhance sustainability efforts. Key applications
 include:
 
-## Environmental Monitoring
+## Environmental Monitoring {#mpkb:section:sec-0181}
 - **Biosensors for Pollution Detection**: Molecularly engineered sensors capable of detecting
   specific pollutants like heavy metals, microplastics, or greenhouse gases in air, water, and
   soil.  
@@ -14,7 +27,7 @@ include:
 - **Biodiversity Tracking**: Molecular systems designed to identify and monitor species presence
   through environmental DNA (eDNA) analysis.  
 
-## Pollution Control and Mitigation
+## Pollution Control and Mitigation {#mpkb:section:sec-0182}
 - **Water Purification**: Programmable molecular filters and catalysts to remove toxins, pathogens,
   and microplastics from water sources.  
 - **Air Quality Improvement**: Molecular systems that capture and neutralize harmful pollutants,
@@ -22,7 +35,7 @@ include:
 - **Oil Spill Cleanup**: Engineered molecules or microorganisms that break down hydrocarbons
   efficiently without harming ecosystems.  
 
-## Climate Change Mitigation
+## Climate Change Mitigation {#mpkb:section:sec-0183}
 - **Carbon Capture and Storage**: Molecular frameworks designed to capture CO₂ from the atmosphere
   and store it safely or convert it into useful materials.  
 - **Methane Management**: Programmable molecular tools for detecting and neutralizing methane
@@ -30,7 +43,7 @@ include:
 - **Geoengineering Solutions**: Molecular systems to reflect solar radiation or enhance cloud
   formation for localized climate control.  
 
-## Ecosystem Restoration
+## Ecosystem Restoration {#mpkb:section:sec-0184}
 - **Soil Remediation**: Programmable microbes that detoxify contaminated soils by breaking down
   pollutants like pesticides or heavy metals.  
 - **Marine Restoration**: Molecular tools to rebuild coral reefs or support aquatic life through
@@ -38,7 +51,7 @@ include:
 - **Reforestation and Plant Health**: Engineered molecular systems to enhance plant growth, improve
   resilience to pests, and accelerate ecosystem recovery.  
 
-## Waste Management
+## Waste Management {#mpkb:section:sec-0185}
 - **Biodegradable Plastics**: Molecular programming to create plastics that degrade under specific
   environmental conditions, reducing pollution.  
 - **Waste-to-Energy Systems**: Programmable organisms or catalysts to convert waste materials into
@@ -46,7 +59,7 @@ include:
 - **Recycling Enhancement**: Molecular systems that sort and break down complex materials into
   reusable components.  
 
-## Disaster Response
+## Disaster Response {#mpkb:section:sec-0186}
 - **Rapid Environmental Assessment**: Deployable molecular sensors to evaluate contamination levels
   and environmental risks during natural disasters or industrial accidents.  
 - **Toxin Neutralization**: Programmable molecular agents for fast mitigation of hazardous spills or

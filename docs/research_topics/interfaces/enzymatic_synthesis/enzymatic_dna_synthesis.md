@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-017"
+type: article
+title: "Enzymatic Dna Synthesis"
+description: "Enzymatic DNA Synthesis (EDS)—which uses engineered enzymes like Terminal Deoxynucleotidyl Transferase (TdT) to polymerize DNA without traditional phosphoramidite chemistry—fits primarily under Interfaces or Systems, depending..."
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 Enzymatic DNA Synthesis (EDS)—which uses engineered enzymes like Terminal Deoxynucleotidyl
 Transferase (TdT) to polymerize DNA without traditional phosphoramidite chemistry—fits primarily
 under Interfaces or Systems, depending on whether you emphasize the digital-to-biochemical

@@ -1,3 +1,22 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-027"
+type: article
+title: "Optogenetics"
+description: "Optogenetics involves genetically encoded, light-sensitive proteins (such as channelrhodopsins or photoreceptors) used to control living cells, tissues, or neural activity in vivo or in cell culture"
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships:
+  - type: related
+    target: "mpkb:document:doc-040"
+  - type: related
+    target: "mpkb:document:doc-028"
+  - type: related
+    target: "mpkb:document:doc-026"
+sources: []
+---
+
 Optogenetics involves genetically encoded, light-sensitive proteins (such as channelrhodopsins or
 photoreceptors) used to control living cells, tissues, or neural activity in vivo or in cell
 culture.
@@ -13,3 +32,11 @@ plant photoreceptors like CRY2/CIBN or LOV domains).
 
 Role in Molecular Programming	Acts as an actuator or regulatory interface to command cellular
 machinery using light signals.
+
+## Related Topics {#mpkb:section:sec-1045}
+
+- [Generative optogenetics: system concept and constraints](../../system_integration_and_control/generative_optogenetics.md)
+- [Exploratory generative-optogenetics notes](generative_optogenetics.md) (draft)
+- [Photo-activatable CRISPR](photo-activatable_crispr.md)
+- [Optogenetic actuators](optogenetic_actuators.md)
+- [Enzymatic DNA synthesis](../enzymatic_synthesis/enzymatic_dna_synthesis.md)

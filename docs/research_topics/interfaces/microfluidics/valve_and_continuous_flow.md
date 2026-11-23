@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-022"
+type: article
+title: "Valve And Continuous Flow"
+description: "Focus: Using multilayer soft lithography, pneumatic micro-valves, and programmable pumps for automated fluid handling"
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 Focus: Using multilayer soft lithography, pneumatic micro-valves, and programmable pumps for
 automated fluid handling.
 

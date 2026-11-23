@@ -1,8 +1,21 @@
-# About
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-002"
+type: index
+title: "About"
+description: "This knowledge base acts as an aggregation platform for the field of molecular programming"
+topics: []
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
+# About {#mpkb:section:sec-0006}
 
 This knowledge base acts as an aggregation platform for the field of molecular programming.
 
-## Mission
+## Mission {#mpkb:section:sec-0007}
 
 The primary goal of this knowledge base is to make it easier to enter the field of molecular
 programming. It aims to equip users with resources to:
@@ -12,7 +25,7 @@ programming. It aims to equip users with resources to:
 - Design and fabricate devices
 - Collaborate with the molecular programming community
 
-## Vision
+## Vision {#mpkb:section:sec-0008}
 
 This is intended to be a community-driven project that promotes open science and collaboration. The
 project envisions a gradual shift away from the traditional peer-review process, toward a pipeline

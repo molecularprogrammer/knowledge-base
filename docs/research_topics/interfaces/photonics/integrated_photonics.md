@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-030"
+type: article
+title: "Integrated Photonics"
+description: "Focus: Harnessing silicon photonic circuits, optoelectronic chips, and microscopic waveguides to generate, route, split, and detect light with immense bandwidth and near-zero latency"
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 Focus: Harnessing silicon photonic circuits, optoelectronic chips, and microscopic waveguides to
 generate, route, split, and detect light with immense bandwidth and near-zero latency.
 

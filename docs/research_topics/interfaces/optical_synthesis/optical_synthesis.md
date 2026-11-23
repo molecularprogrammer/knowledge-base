@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-024"
+type: article
+title: "Optical Synthesis"
+description: "Primary Objective High-throughput fabrication and manufacturing of chemical or molecular libraries (in vitro)"
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 Primary Objective	High-throughput fabrication and manufacturing of chemical or molecular libraries
 (in vitro).
 
