@@ -58,3 +58,27 @@ tasks:
       - task: _docs-run
         vars: { CMD: "bash"}
 
+  compiler:report:
+    desc: "Report schema migration diagnostics without failing"
+    cmds:
+      - task: _docs-run
+        vars: { CMD: "python -m compiler.compiler --root /workspace/docs --mode report"}
+
+  compiler:check:
+    desc: "Validate all knowledge-base Markdown against the schema"
+    cmds:
+      - task: _docs-run
+        vars: { CMD: "python -m compiler.compiler --root /workspace/docs --mode strict"}
+
+  compiler:build:
+    desc: "Validate and generate machine-readable artifacts under site/knowledge-base"
+    cmds:
+      - task: _docs-run
+        vars: { CMD: "python -m compiler.compiler --root /workspace/docs --mode strict --output /workspace/site/knowledge-base"}
+
+  compiler:test:
+    desc: "Run compiler unit and integration tests"
+    cmds:
+      - task: _docs-run
+        vars: { CMD: "python -m unittest discover -s compiler/tests -v"}
+
