@@ -1,4 +1,24 @@
-Atomic-Scale Tools in Molecular Programming
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-011"
+type: reference
+title: "Atomic-Scale Research Tools"
+description: "Catalogs microscopy, spectroscopy, simulation, and fabrication methods used to study and engineer atomic- and molecular-scale systems."
+topics: ["interfaces", "software-tools", "theoretical-foundations"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
+# Atomic-Scale Research Tools {#mpkb:section:sec-1004}
+
+Atomic- and molecular-scale research uses instruments and computational methods to observe,
+characterize, model, and manipulate systems. The methods below support different measurements and
+length scales. Tool capabilities depend on the instrument configuration and sample conditions.
+
+## Scanning Probe Microscopy {#mpkb:section:sec-1005}
+
 1. Atomic Force Microscopy (AFM)
 Function: A powerful tool for imaging, measuring, and manipulating materials at the atomic level.
 Applications:
@@ -8,6 +28,8 @@ Surface characterization and mechanical property measurement of materials at the
 Example Tools:
 Veeco AFM: Commercial AFM systems for high-resolution imaging.
 Bruker AFM: Atomic force microscopy tools for surface characterization and manipulation.
+## Scanning Tunneling Microscopy {#mpkb:section:sec-1006}
+
 2. Scanning Tunneling Microscopy (STM)
 Function: A technique that allows for imaging and manipulating individual atoms on surfaces.
 Applications:
@@ -17,6 +39,8 @@ Studying electronic properties of surfaces and molecules.
 Example Tools:
 PTB STM: Advanced STM systems for nanoscale research and manipulation.
 Unisoku UHV STM: Ultra-high vacuum scanning tunneling microscope for precise atomic control.
+## Molecular Dynamics and Materials Simulation {#mpkb:section:sec-1007}
+
 3. Molecular Dynamics Simulation Software
 Function: Computational tools that simulate atomic and molecular interactions over time.
 Applications:
@@ -28,6 +52,8 @@ GROMACS: A molecular dynamics simulation software, often used for protein, lipid
 systems.
 LAMMPS: Molecular dynamics software for simulating atomic-level interactions in various materials.
 NAMD: A molecular dynamics tool for large biomolecular systems.
+## Quantum Chemistry Software {#mpkb:section:sec-1008}
+
 4. Quantum Chemistry Software
 Function: Software tools that use quantum mechanical principles to model atomic-scale systems.
 Applications:
@@ -38,6 +64,8 @@ Example Tools:
 Gaussian: A computational chemistry software used to predict the electronic structure of molecules.
 ORCA: A quantum chemistry tool for studying molecular systems and their properties.
 Q-Chem: A comprehensive software package for quantum chemistry calculations.
+## X-ray Crystallography {#mpkb:section:sec-1009}
+
 5. X-ray Crystallography
 Function: A technique used to determine the atomic and molecular structure of a crystal.
 Applications:
@@ -47,6 +75,8 @@ Resolving atomic-level structural details for drug design and material engineeri
 Example Tools:
 Bruker D8: A commercial X-ray diffraction system used for structural analysis.
 Rigaku X-ray systems: Widely used for protein and materials crystallography.
+## Electron Microscopy {#mpkb:section:sec-1010}
+
 6. Electron Microscopy (EM)
 Function: Using electron beams to image and manipulate atoms or molecules on a surface.
 Applications:
@@ -56,6 +86,8 @@ Electron tomography for 3D imaging of molecular structures.
 Example Tools:
 JEOL Electron Microscopes: Advanced tools for high-resolution imaging at the atomic scale.
 FEI Tecnai: A brand of transmission electron microscopes used in atomic-scale imaging.
+## Nuclear Magnetic Resonance Spectroscopy {#mpkb:section:sec-1011}
+
 7. Nuclear Magnetic Resonance (NMR) Spectroscopy
 Function: A tool for determining the atomic structure of molecules by observing nuclear magnetic
 resonance.
@@ -65,6 +97,8 @@ Investigating atomic dynamics and molecular conformations in solution.
 Example Tools:
 Bruker Avance: NMR spectrometer used for atomic and molecular structure determination.
 JEOL JNM: High-resolution NMR systems for atomic-scale analysis.
+## Atomic-Scale Materials Simulation {#mpkb:section:sec-1012}
+
 8. Atomic-Scale Simulation Tools for Materials Science
 Function: Computational tools designed for modeling atomic interactions in materials.
 Applications:
@@ -74,6 +108,8 @@ magnetism).
 Example Tools:
 VASP: A computational tool for performing quantum mechanical simulations of atomic systems.
 Quantum ESPRESSO: A suite of programs for atomic-scale simulations of materials.
+## Molecular Beam Epitaxy {#mpkb:section:sec-1013}
+
 9. Molecular Beam Epitaxy (MBE)
 Function: A method for creating thin films and nanostructures one atomic layer at a time.
 Applications:
@@ -82,6 +118,8 @@ Creating quantum dots and nanowires with atomic precision.
 Developing atomic-scale electronic devices.
 Example Tools:
 Veeco GEN10 MBE: Molecular beam epitaxy system for precise thin-film deposition.
+## Single-Molecule Imaging and Manipulation {#mpkb:section:sec-1014}
+
 10. Single-Molecule Imaging and Manipulation
 Function: Techniques used to manipulate and study individual molecules at the atomic level.
 Applications:

@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-021"
+type: article
+title: "Optofluidics And Light Control"
+description: "Focus: Integrating microfluidic channels with optical projection systems (like digital micromirror device or DMD projectors)"
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 Focus: Integrating microfluidic channels with optical projection systems (like digital micromirror
 device or DMD projectors).
 

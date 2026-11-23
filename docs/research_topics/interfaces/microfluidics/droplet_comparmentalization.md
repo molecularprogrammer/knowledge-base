@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-019"
+type: article
+title: "Droplet Comparmentalization"
+description: "Focus: Generating picoliter-to-nanoliter water-in-oil droplets to serve as isolated reaction vessels"
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 Focus: Generating picoliter-to-nanoliter water-in-oil droplets to serve as isolated reaction
 vessels.
 

@@ -1,4 +1,25 @@
-# Self-Assembling DNA Nanostructures
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-052"
+type: article
+title: "Self-Assembling DNA Nanostructures"
+description: "Fundamental Concepts Watson-Crick Base Pairing Complementary strands Hydrogen bonding DNA Hybridization Duplex formation Kinetics and thermodynamics Structural DNA Nanotechnology Use of DNA as a building material Programmable..."
+topics: ["structures-and-dynamics", "dna-nanotechnology"]
+keywords: []
+status: published
+relationships:
+  - type: related
+    target: "mpkb:document:doc-049"
+  - type: related
+    target: "mpkb:document:doc-084"
+  - type: related
+    target: "mpkb:document:doc-045"
+  - type: related
+    target: "mpkb:document:doc-050"
+sources: []
+---
+
+# Self-Assembling DNA Nanostructures {#mpkb:section:sec-0087}
 
 * Self-Assembling DNA Nanostructures
 ** Fundamental Concepts
@@ -91,3 +112,12 @@
 *** Computer Science
 **** Algorithm design for self-assembly
 **** Simulating DNA nanostructure formation
+
+## Related Topics {#mpkb:section:sec-1039}
+
+- [DNA origami](dna_origami.md)
+- [Molecular self-assembly](molecular_self-assembly.md)
+- [Nucleic-acid hybridization](nucleic_acid_hybridization.md)
+- [DNA strand displacement](../circuits/dna_strand_displacement.md)
+- [Molecular walkers](molecular_walkers.md)
+- [Templated assembly](../theoretical_foundations/templated_assembly.md)

@@ -1,11 +1,24 @@
-# Construction
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-076"
+type: article
+title: "Construction"
+description: "Molecular programming is poised to revolutionize the construction industry by enabling the creation of advanced materials, sustainable building solutions, and autonomous construction techniques."
+topics: ["construction"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
+# Construction {#mpkb:section:sec-0165}
 
 Molecular programming is poised to revolutionize the construction industry by enabling the creation
 of advanced materials, sustainable building solutions, and autonomous construction techniques. By
 controlling matter at the molecular level, these innovations offer enhanced strength, durability,
 adaptability, and efficiency in construction practices. Key applications include:
 
-## Advanced Building Materials
+## Advanced Building Materials {#mpkb:section:sec-0166}
 - **Self-Healing Concrete**: Concrete embedded with molecular agents that can repair cracks
   automatically, extending the lifespan of buildings and reducing maintenance costs.  
 - **Programmable Bricks and Blocks**: Materials designed to change shape or properties in response
@@ -15,7 +28,7 @@ adaptability, and efficiency in construction practices. Key applications include
 - **Smart Glass**: Windows and facades with molecularly engineered coatings that adjust opacity or
   reflectivity in response to sunlight, improving energy efficiency and comfort inside buildings.
 
-## Sustainable Construction Practices
+## Sustainable Construction Practices {#mpkb:section:sec-0167}
 - **Biodegradable Building Materials**: Construction materials designed to decompose naturally at
   the end of their life cycle, reducing waste and environmental impact.  
 - **Carbon-Negative Concrete**: Concrete formulations that absorb more CO₂ than they emit, helping
@@ -26,7 +39,7 @@ adaptability, and efficiency in construction practices. Key applications include
 - **Recyclable Materials**: Molecularly engineered materials that can be easily disassembled,
   recycled, and reused, minimizing waste during demolition and reconstruction projects.
 
-## Autonomous Construction
+## Autonomous Construction {#mpkb:section:sec-0168}
 - **In-Situ Resource Utilization (ISRU)**: Molecularly programmed systems to convert local resources
   into building materials and fuels.
 - **Self-Assembling Structures**: Using molecular programming to create components that autonomously
@@ -39,7 +52,7 @@ adaptability, and efficiency in construction practices. Key applications include
   repairing damage without human intervention, ensuring long-term structural integrity with minimal
   maintenance.  
 
-## Smart Infrastructure
+## Smart Infrastructure {#mpkb:section:sec-0169}
 - **Sensors Integrated into Building Materials**: Molecular sensors embedded in construction
   materials that monitor structural health, detect damage, or measure environmental factors such as
   temperature, humidity, or air quality.  
@@ -49,7 +62,7 @@ adaptability, and efficiency in construction practices. Key applications include
 - **Smart Roads and Pavements**: Roadways made from molecularly engineered materials that can heal
   cracks, monitor traffic conditions, and even generate electricity through vehicle movement.  
 
-## High-Performance Coatings
+## High-Performance Coatings {#mpkb:section:sec-0170}
 - **Anti-Corrosion Coatings**: Molecularly engineered coatings for metal surfaces used in bridges,
   pipelines, and buildings to prevent corrosion and extend the life of infrastructure.  
 - **Fire-Resistant Materials**: High-performance materials designed at the molecular level to resist
@@ -57,7 +70,7 @@ adaptability, and efficiency in construction practices. Key applications include
 - **Waterproofing Solutions**: Advanced molecular coatings that create water-resistant surfaces for
   foundations, basements, and roofing materials, protecting buildings from moisture damage.
 
-## Disaster-Resilient Structures
+## Disaster-Resilient Structures {#mpkb:section:sec-0171}
 - **Earthquake-Resistant Materials**: Molecularly engineered materials with the ability to flex and
   absorb energy during seismic events, improving the resilience of buildings and infrastructure to
   earthquakes.  
@@ -68,7 +81,7 @@ adaptability, and efficiency in construction practices. Key applications include
   conditions, such as automatically adjusting insulation in response to temperature shifts or
   altering their structural properties to resist high winds.  
 
-## Modular Construction
+## Modular Construction {#mpkb:section:sec-0172}
 - **Prefabricated Molecular Components**: Pre-engineered building blocks or units that can be
   quickly assembled onsite, reducing construction time and cost.  
 - **Customizable Building Modules**: Modular construction components that can be tailored to

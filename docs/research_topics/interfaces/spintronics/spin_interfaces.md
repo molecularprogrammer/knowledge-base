@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-032"
+type: article
+title: "Spin Interfaces"
+description: "Focus: Managing the physical and electronic boundaries where organic molecules meet inorganic materials, ferromagnetic contacts, or external hardware leads"
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 Focus: Managing the physical and electronic boundaries where organic molecules meet inorganic
 materials, ferromagnetic contacts, or external hardware leads.
 

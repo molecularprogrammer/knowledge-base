@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-014"
+type: article
+title: "Molecular Spintronics"
+description: "Focus: Harnessing the intrinsic spin of electrons within organic molecular architectures for ultra-low-power logic, non-volatile data storage, and spin-based computing"
+topics: ["circuits"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 Focus: Harnessing the intrinsic spin of electrons within organic molecular architectures for
 ultra-low-power logic, non-volatile data storage, and spin-based computing.
 

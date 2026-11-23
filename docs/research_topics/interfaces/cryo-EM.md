@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-037"
+type: article
+title: "Cryogenic Electron Microscopy"
+description: "Explains how cryogenic electron microscopy images vitrified biological samples and supports structural analysis of molecules and assemblies."
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 Cryo-electron microscopy (cryo-EM) is a technique that allows scientists to image frozen biological
 molecules and determine their 3D shape: 
 Process

@@ -1,2 +1,0 @@
-collective behavior at different scales; distributed systems, heirarcahl design, ; Compositionality,
-modularity, hierarchical design, distributed systems, and multiscale modeling.

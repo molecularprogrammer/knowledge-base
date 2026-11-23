@@ -1,13 +1,10 @@
-# Organize from a bottom up perspective
+# Organize by long-term topic area
 
 nav:
     - index.md
+    - circuits
+    - interfaces
     - theoretical_foundations
-    - quantum_scale
-    - atomic_scale
-    - molecular_scale
-    - nanoscale
-    - microscale
-    - macroscale
     - system_integration_and_control
+    - structures_and_dynamics
     - ...

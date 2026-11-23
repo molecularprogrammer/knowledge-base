@@ -1,3 +1,16 @@
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-020"
+type: article
+title: "Lab On A Chip"
+description: "Focus: Integrating optical, fluorescence, or electrochemical sensors directly into the microfluidic architecture"
+topics: ["interfaces"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
 Focus: Integrating optical, fluorescence, or electrochemical sensors directly into the microfluidic
 architecture.
 

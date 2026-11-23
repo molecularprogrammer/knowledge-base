@@ -1,10 +1,23 @@
-# Energy
+---
+schema_version: "1.0.0"
+id: "mpkb:document:doc-077"
+type: article
+title: "Energy"
+description: "Molecular programming is transforming the energy sector by enabling efficient, sustainable, and adaptive solutions for generating, capturing, and storing energy."
+topics: ["energy"]
+keywords: []
+status: published
+relationships: []
+sources: []
+---
+
+# Energy {#mpkb:section:sec-0173}
 
 Molecular programming is transforming the energy sector by enabling efficient, sustainable, and
 adaptive solutions for generating, capturing, and storing energy. These innovations address key
 challenges in renewable energy, grid stability, and resource efficiency. Key applications include:
 
-## Energy Generation
+## Energy Generation {#mpkb:section:sec-0174}
 - **Artificial Photosynthesis**: Molecular systems that mimic natural photosynthesis to produce
   fuels like hydrogen or methanol from sunlight, water, and CO₂.  
 - **Biofuels**: Programmable organisms designed to efficiently convert biomass into high-energy
@@ -12,7 +25,7 @@ challenges in renewable energy, grid stability, and resource efficiency. Key app
 - **Solar Cells**: Advanced photovoltaic materials engineered at the molecular level for higher
   efficiency and flexibility.  
 
-## Energy Harvesting
+## Energy Harvesting {#mpkb:section:sec-0175}
 - **Piezoelectric Nanomaterials**: Molecularly designed systems that harvest mechanical energy from
   vibrations, motion, or sound for small-scale power needs.  
 - **Thermoelectric Materials**: Programmable molecular structures that convert heat gradients into
@@ -20,7 +33,7 @@ challenges in renewable energy, grid stability, and resource efficiency. Key app
 - **Wireless Energy Transfer**: Molecular devices that enhance energy capture from electromagnetic
   fields, enabling improved wireless power systems.  
 
-## Energy Storage
+## Energy Storage {#mpkb:section:sec-0176}
 - **Next-Generation Batteries**: Molecularly engineered materials for high-capacity, long-lasting,
   and faster-charging batteries, including lithium-sulfur and solid-state technologies.  
 - **Supercapacitors**: Programmable molecular components for energy storage systems that combine
@@ -28,19 +41,22 @@ challenges in renewable energy, grid stability, and resource efficiency. Key app
 - **Hydrogen Storage**: Molecular frameworks and nanostructures optimized for safe, lightweight, and
   efficient hydrogen storage.  
 
-## Grid Stability and Management
+## Grid Stability and Management {#mpkb:section:sec-0177}
 - **Smart Molecules for Energy Flow**: Programmable materials that regulate and optimize energy flow
   in power grids, enhancing stability and efficiency.  
 - **Dynamic Energy Storage**: Molecular systems that adapt to changing energy demands, storing or
   releasing power as needed.  
 
-## Environmental Sustainability
+## Environmental Sustainability {#mpkb:section:sec-0178}
 - **Carbon Capture and Conversion**: Molecular systems that capture CO₂ from the atmosphere and
   convert it into useful fuels or materials.  
 - **Clean Catalysis**: Programmable catalysts that drive energy production reactions with minimal
   byproducts or environmental impact.  
 
-## Portable and Wearable Energy Solutions
+For an example that separates electrical energy input from biological feedstock, see [energy and
+feedstock inputs for biological systems](../../research_topics/system_integration_and_control/energy_and_feedstock_inputs.md).
+
+## Portable and Wearable Energy Solutions {#mpkb:section:sec-0179}
 - **Flexible Energy Storage**: Molecularly engineered materials for lightweight, wearable batteries
   and energy storage systems.  
 - **Self-Charging Devices**: Integration of energy-harvesting molecules into personal electronics
